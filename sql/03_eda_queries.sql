@@ -1,0 +1,1 @@
+-- Contains exploratory SQL queries used to analyze distributions, correlations, missing values, and key patterns in the anime dataset.
