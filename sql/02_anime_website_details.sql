@@ -1,8 +1,10 @@
--- 02_anime_pruned.sql
+-- 02_anime_website_details.sql
 -- Purpose:
--- Remove unnecessary or redundant columns from the dataset by recreating the
--- table with only the selected fields kept. BigQuery does not support DROP COLUMN
--- directly, so we define the desired schema explicitly.
+-- Extract key website-level performance metrics for each anime from the
+-- cleaned dataset (`anime_filtered`). This table isolates engagement signals
+-- such as members, favorites, and completion status for focused analysis.
+
+CREATE OR REPLACE TABLE `anime-2023-478915.anime_dataset.anime_website_details` AS
 
 SELECT
   anime_id,
@@ -19,5 +21,5 @@ SELECT
   Completed AS completed,
   On_Hold AS on_hold,
   Dropped AS dropped
-  
+
 FROM `anime-2023-478915.anime_dataset.anime_filtered`;
